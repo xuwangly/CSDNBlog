@@ -1,6 +1,6 @@
-首先介绍两个文件
+## 首先介绍两个文件
 
-```
+```sh
 /etc/fstab
 /etc/mtab
 ```
@@ -8,7 +8,7 @@
 fstab是系统分区信息以及系统启动时磁盘的挂载参数，该文件是一个静态文件（系统启动后不再改变，如人为改变，需要重启系统）
 mtab是当前系统中已经挂载的磁盘列表，该文件是一个动态文件，即随系统mount和umount文件系统而随时发生改变
 
-```
+```sh
 cat fstab
 # /etc/fstab: static file system information.
 #
@@ -24,7 +24,7 @@ UUID=eb5303a8-ecad-4b3a-a7e7-5f1c74ec4222 none            swap    sw            
 /dev/sdc1 /media/sdb1 fuseblk uid=1000,gid=1000,umask=000,blksize=4096 0 0
 ```
 
-```
+```sh
 [15:50@/etc]> cat mtab
 /dev/sda1 / ext4 rw,errors=remount-ro 0 0
 proc /proc proc rw,noexec,nosuid,nodev 0 0
